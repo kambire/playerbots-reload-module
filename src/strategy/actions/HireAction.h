@@ -1,0 +1,22 @@
+﻿/*
+ * Copyright (C) 2016+ AzerothCore <www.azerothcore.org>, released under GNU AGPL v3 license, you may redistribute it
+ * and/or modify it under version 3 of the License, or (at your option), any later version.
+ */
+
+#ifndef _PLAYERBOT_HIREACTION_H
+#define _PLAYERBOT_HIREACTION_H
+
+#include "Action.h"
+
+class PlayerbotAI;
+
+class HireAction : public Action
+{
+public:
+    HireAction(PlayerbotAI* botAI) : Action(botAI, "hire") {}
+
+    bool Execute([[maybe_unused]] Event event) override;
+};
+
+#endif
+
